@@ -104,10 +104,10 @@ export default function ChatInterface() {
 
       // 3. レスポンスデータの抽出
       const supporterText =
-        data.resurt?.supporterResponse ||
+        data.result?.supporterResponse ||
         data.steps?.['supporter-reply']?.output?.supporterResponse ||
         "（Supporterからの応答が取得できませんでした）";
-        console.log('supporterText:', supporterText);
+        //console.log('supporterText:', supporterText);
 
       const examinerText =
         data.result?.examinerResponse || // 最終結果に入っている場合
@@ -188,13 +188,13 @@ export default function ChatInterface() {
         <h1 className="font-bold text-lg text-zinc-800 dark:text-white">Chat</h1>
         <div className="flex gap-2">
           {/* キャラクターバッジ */}
-          <span className="text-xs font-medium bg-red-100 text-red-800 px-2.5 py-0.5 rounded-full flex items-center gap-1 border border-red-200">
+          <span className="text-xs font-medium bg-green-100 text-green-800 px-2.5 py-0.5 rounded-full flex items-center gap-1 border border-red-200">
             {AGENTS.supporter.icon} {AGENTS.supporter.name} 
           </span>
-          <span className="text-xs font-medium bg-slate-100 text-slate-800 px-2.5 py-0.5 rounded-full flex items-center gap-1 border border-slate-200">
+          <span className="text-xs font-medium bg-pink-100 text-pink-800 px-2.5 py-0.5 rounded-full flex items-center gap-1 border border-slate-200">
             {AGENTS.examiner.icon} {AGENTS.examiner.name}
           </span>
-          <span className="text-xs font-medium bg-slate-100 text-slate-800 px-2.5 py-0.5 rounded-full flex items-center gap-1 border border-slate-200">
+          <span className="text-xs font-medium  bg-blue-100 text-blue-800 px-2.5 py-0.5 rounded-full flex items-center gap-1 border border-slate-200">
             {AGENTS.mediator.icon} {AGENTS.mediator.name}
           </span>
         </div>
